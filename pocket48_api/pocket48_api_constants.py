@@ -1,0 +1,27 @@
+LOGIN_URL = 'https://pocketapi.48.cn/user/api/v1/login/app/mobile'
+IM_ROOM_MESSAGE_URL = 'https://pocketapi.48.cn/im/api/v1/chatroom/msg/list/homeowner'
+IM_ROOM_MESSAGE_ALL_URL = 'https://pocketapi.48.cn/im/api/v1/chatroom/msg/list/all'
+IM_ROOM_INFO_URL = 'https://pocketapi.48.cn/im/api/v1/im/room/info/type/source'
+IM_ROOM_SEARCH_URL = 'https://pocketapi.48.cn/im/api/v1/im/search'
+USER_INFO_URL = 'https://pocketapi.48.cn/user/api/v1/user/info/home'
+USER_ARCHIVES_URL = 'https://pocketapi.48.cn/user/api/v1/user/star/archives'
+# TEAM_STAR_URL = 'https://pocketapi.48.cn/user/api/v1/client/update/group_team_star'
+USER_TIMELINE_URL = 'https://pocketapi.48.cn/posts/api/v1/posts/timeline/home'
+FRIENDS_TIMELINE_URL = 'https://pocketapi.48.cn/posts/api/v1/posts/timeline/friends'
+USER_POST_DETAILS_URL = 'https://pocketapi.48.cn/posts/api/v1/posts/details'
+IMAGE_LIST_URL = 'https://pocketapi.48.cn/posts/api/v1/posts/img/list'
+VIDEO_LIST_URL = 'https://pocketapi.48.cn/posts/api/v2/posts/video/list'
+# IM_USER_INFO_URL = 'https://pocketapi.48.cn/im/api/v1/im/userinfo'
+# CONVERSATION_URL = 'https://pocketapi.48.cn/im/api/v1/conversation/page'
+# CONVERSATION_FANDOM_URL = 'https://pocketapi.48.cn/im/api/v1/conversation/fandom' # empty?
+LIVE_LIST_URL = 'https://pocketapi.48.cn/live/api/v1/live/getLiveList'
+LIVE_URL = 'https://pocketapi.48.cn/live/api/v1/live/getLiveOne'
+OPEN_LIVE_LIST_URL = 'https://pocketapi.48.cn/live/api/v1/live/getOpenLiveList'
+OPEN_LIVE_URL = 'https://pocketapi.48.cn/live/api/v1/live/getOpenLiveOne'
+
+# GENERAL_ALBUM_LIST_URL = 'https://pocketapi.48.cn/media/api/media/v1/album/list'
+# GENERAL_VIDEO_LIST_URL = 'https://pocketapi.48.cn/media/api/media/v1/video/list'
+# GENERAL_RADIO_LIST_URL = 'https://pocketapi.48.cn/media/api/media/v1/talk/list'
+# GENERAL_RADIO_URL = 'https://pocketapi.48.cn/media/api/media/v1/talk'
+# /home/api/home/user/tools/config what is this?
+# api/v1/im/room/info ?
