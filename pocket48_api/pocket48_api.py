@@ -113,7 +113,7 @@ class Pocket48API(object):
     def get_room_posts(self, room_id, timestamp, owner=True):
         payload = {'needTop1Msg': False,
                    'nextTime': timestamp,
-                   "roomId": room_id}
+                   'roomId': room_id}
         url = IM_ROOM_MESSAGE_URL if owner else IM_ROOM_MESSAGE_ALL_URL
         response_content = self.__request(url, json.dumps(payload))
         posts = [self.__argument_item(item) for item in response_content['message']]
