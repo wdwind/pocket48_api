@@ -93,11 +93,11 @@ class Pocket48API(object):
         def contents_extractor(results):
             return {item['msgidClient']: item
                     for item in results.get('posts')
-                    if start_timestamp and int(item.get('msgTime')) >= start_timestamp}
+                    if start_timestamp is not None and int(item.get('msgTime')) >= start_timestamp}
 
         def query_generator(results):
             next_timestamp = results.get('nextTime')
-            if not next_timestamp or (start_timestamp and int(next_timestamp) < start_timestamp):
+            if not next_timestamp or (start_timestamp is not None and int(next_timestamp) < start_timestamp):
                 return None
             return {'timestamp': next_timestamp}
 

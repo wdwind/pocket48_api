@@ -1,4 +1,5 @@
 .idea
 venv
+integ_test
 *.pyc
 *.pkl
