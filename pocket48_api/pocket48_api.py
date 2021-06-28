@@ -228,11 +228,11 @@ class Pocket48API(object):
             'Host': 'pocketapi.48.cn',
             'accept': '*/*',
             'Accept-Language': 'zh-Hans-CN;q=1',
-            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; OPPO R11 Plus Build/NMF26X)',
-            'Accept-Encoding': 'gzip, deflate',
-            'appInfo': '{"IMEI":"866174951278817","appBuild":"200703","appVersion":"6.0.16","deviceId":"866174951278817","deviceName":"OPPO R11 Plus","osType":"android","osVersion":"5.1.1","phoneName":"OPPO R11 Plus","phoneSystemVersion":"5.1.1","vendor":"OPPO"}',
-            'Content-Type': 'application/json;charset=utf-8',
-            'Connection': 'keep-alive',
+            'User-Agent': 'PocketFans201807/6.2.0_21061802 (Moto M:Android 6.0.1;Motorola INDR003245)',
+            'Accept-Encoding': 'gzip',
+            'appInfo': '{"IMEI":"351897089801975","appBuild":"21061802","appVersion":"6.2.0","deviceId":"351897089801975","deviceName":"Moto M","osType":"android","osVersion":"6.0.1","phoneName":"Moto M","phoneSystemVersion":"6.0.1","vendor":"Motorola"}',
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Connection': 'Keep-Alive',
             'pa': self.__pa()
         }
 
@@ -253,4 +253,4 @@ class Pocket48API(object):
     # Only valid for one account, and it lasts for at least 10 mins
     @staticmethod
     def __pa():
-        return 'MTYzNjAxNzMxNTAwMCw3NjkyNzVkNTliZWU0MmQ0OGVjOWIyYTMwY2FkOWQzOSxkNTVhZGYwYjdiOTA2OGE1NjlkNmVhNjk3MDlhM2NhMw=='
+        return 'MTYzNjAxNzMxNTAwMCw3NjkyNzVkNTliZWU0MmQ0OGVjOWIyYTMwY2FkOWQzOSw3NzFhY2QwY2JiZDhkZDUzZDdjZGY3YTcxNGYzNmVlOCwyMDIxMDYwOTAx'
