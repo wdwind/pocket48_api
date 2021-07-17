@@ -87,7 +87,7 @@ class Pocket48API(object):
         return self.get_room_posts(room_id, int(time.time() * 1000), owner)
 
     def get_room_posts_between(self, room_id, start_timestamp=None, end_timestamp=None, owner=True):
-        if not end_timestamp:
+        if end_timestamp is None:
             end_timestamp = int(time.time() * 1000)
 
         def contents_extractor(results):
