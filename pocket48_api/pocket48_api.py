@@ -228,11 +228,12 @@ class Pocket48API(object):
             'Host': 'pocketapi.48.cn',
             'accept': '*/*',
             'Accept-Language': 'zh-Hans-CN;q=1',
-            'User-Agent': 'PocketFans201807/6.2.0_21061802 (Moto M:Android 6.0.1;Motorola INDR003245)',
+            'User-Agent': 'PocketFans201807/7.1.7_23110903 (Galaxy S9:Android 9;Samsung INDR003245)',
             'Accept-Encoding': 'gzip',
-            'appInfo': '{"IMEI":"351897089801975","appBuild":"21061802","appVersion":"6.2.0","deviceId":"351897089801975","deviceName":"Moto M","osType":"android","osVersion":"6.0.1","phoneName":"Moto M","phoneSystemVersion":"6.0.1","vendor":"Motorola"}',
+            'appInfo': '{"IMEI":"fcd97ea13c7f0bdd","appBuild":"23110903","appName":"pocket48","appVersion":"7.1.7","deviceId":"fcd97ea13c7f0bdd","deviceName":"Galaxy S9","osType":"android","osVersion":"9","phoneName":"Galaxy S9","phoneSystemVersion":"9","vendor":"Samsung"}',
             'Content-Type': 'application/json; charset=UTF-8',
             'Connection': 'Keep-Alive',
+            'source_from': 'pocket',
             'pa': self.__pa()
         }
 
