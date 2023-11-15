@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import base64
 import json
 import logging
 import os
@@ -8,6 +9,7 @@ import time
 from functools import wraps
 
 import requests
+from Crypto.Cipher import AES
 
 from .pocket48_api_constants import *
 
@@ -66,7 +68,7 @@ class Pocket48API(object):
     def __init__(self, **kwargs):
         self.token = kwargs.pop('token', '')
         self.username = kwargs.pop('username', '')
-        self.password = kwargs.pop('password', '')
+        self.password = Pocket48API.__AES_PKCS5_encrypt(kwargs.pop('password', ''))
         self.timeout = kwargs.pop('timeout', 60)
         self.logger = logging.getLogger(__name__)
         self.session_file = kwargs.get('session_file', None)
@@ -250,6 +252,21 @@ class Pocket48API(object):
             elif content['status'] in [401005, 401004, 401003]:
                 raise TokenException(f'Invalid token. Url: {url}. Payload: {data}. Response: {response.text}.')
         raise RuntimeError(f'Unknown exception requesting {url}. Response: {response.text}.')
+
+    @staticmethod
+    def __AES_PKCS5_encrypt(data):
+        def pad(byte_array):
+            """
+            pkcs5 padding
+            """
+            pad_len = 16 - len(byte_array) % 16
+            return byte_array + (bytes([pad_len]) * pad_len)
+
+        key = '7yy4tjcw12aipo2c'.encode('utf-8')
+        padded = pad(data.encode('utf-8'))
+        cipher = AES.new(key, AES.MODE_ECB)
+        encrypted = cipher.encrypt(padded)
+        return base64.b64encode(encrypted).decode('utf-8')
 
     # Only valid for one account, and it lasts for at least 10 mins
     @staticmethod

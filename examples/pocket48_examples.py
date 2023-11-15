@@ -5,9 +5,11 @@ import os
 import sys
 import json
 
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from pocket48_api import Pocket48API
 
 
+# Execution: python ./examples/pocket48_examples.py
 def get_room_posts(username, password):
     pock48_client = Pocket48API(username=username, password=password)
 
