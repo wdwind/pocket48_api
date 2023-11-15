@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import json
 import logging
 import os
 import sys
-import json
 
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from pocket48_api import Pocket48API
